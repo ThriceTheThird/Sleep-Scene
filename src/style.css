@@ -1,0 +1,21 @@
+:root { --fg:#e8ecff; --muted:#9aa3d6; --accent:#8fa8ff; }
+html, body { margin:0; width:1920px; height:1080px; overflow:hidden; background:transparent; }
+body { font-family:"Segoe UI", system-ui, sans-serif; color:var(--fg); }
+
+#tint { position:fixed; inset:0; background:radial-gradient(ellipse at center, transparent 40%, #05081f 120%); opacity:var(--dim, .35); pointer-events:none; }
+#stars { position:fixed; inset:0; pointer-events:none; }
+.star { position:absolute; width:3px; height:3px; border-radius:50%; background:#fff; opacity:.2; animation:twinkle var(--d) ease-in-out infinite; animation-delay:var(--delay); }
+@keyframes twinkle { 50% { opacity:.9; transform:scale(1.5); } }
+
+#hud { position:fixed; top:28px; left:50%; transform:translateX(-50%); text-align:center; text-shadow:0 2px 12px #000a; }
+#clock { font-size:64px; font-weight:300; letter-spacing:4px; }
+#timer { font-size:24px; color:var(--muted); }
+
+#chat { position:fixed; right:24px; top:140px; bottom:40px; width:480px; display:flex; flex-direction:column; justify-content:flex-end; gap:8px; overflow:hidden; }
+.msg { background:#0a1030b8; border-left:4px solid var(--accent); border-radius:10px; padding:8px 12px; font-size:24px; line-height:1.3; word-wrap:break-word; animation:in .25s ease-out; transition:opacity 1.5s; }
+.msg.old { opacity:0; }
+.msg .name { font-weight:700; margin-right:8px; }
+.msg img.emote { height:1.4em; vertical-align:middle; margin:0 1px; }
+@keyframes in { from { opacity:0; transform:translateY(12px); } }
+
+#game { position:fixed; left:50%; bottom:40px; transform:translateX(-50%); width:760px; }

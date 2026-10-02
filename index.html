@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sleep Scene Overlay</title>
+<meta name="viewport" content="width=1920">
+<link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+<div id="tint"></div>
+<div id="stars"></div>
+
+<header id="hud">
+  <div id="clock">--:--</div>
+  <div id="timer"><span class="label">sleeping for</span> <span id="elapsed">0m</span></div>
+</header>
+
+<main id="chat" aria-live="off"></main>
+
+<section id="game" hidden></section>
+
+<script src="src/config.js"></script>
+<script src="src/ambient.js"></script>
+<script src="src/chat.js"></script>
+</body>
+</html>
